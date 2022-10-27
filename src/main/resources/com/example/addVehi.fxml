@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller">
+   <children>
+      <Button layoutX="69.0" layoutY="344.0" mnemonicParsing="false" onAction="#cancel" text="Cancel" />
+      <Text layoutX="226.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vehicle Add" wrappingWidth="148.0" AnchorPane.topAnchor="30.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Text layoutX="429.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="left click choose" wrappingWidth="108.0" AnchorPane.leftAnchor="65.0" AnchorPane.topAnchor="0.0" />
+      <MenuBar layoutX="543.0" layoutY="19.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Goto">
+               <items>
+                  <MenuItem fx:id="toLaunch" mnemonicParsing="false" onAction="#goToLaunch" text="Launch Screen" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+      <Button layoutX="10.0" layoutY="344.0" mnemonicParsing="false" onAction="#submit" text="Submit" />
+      <Label fx:id="text1" layoutX="14.0" layoutY="189.0" prefHeight="47.0" prefWidth="200.0" text="Vehicle type:None" />
+      <VBox layoutX="14.0" layoutY="93.0" prefHeight="96.0" prefWidth="129.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Vehicle Type" />
+            <RadioButton fx:id="defaultButton" mnemonicParsing="false" onAction="#select" text="Select type" />
+            <RadioButton fx:id="button1" mnemonicParsing="false" onAction="#select1" text="Standard Bike" />
+            <RadioButton fx:id="button2" mnemonicParsing="false" onAction="#select2" text="Electric Bike" />
+            <RadioButton fx:id="button3" mnemonicParsing="false" onAction="#select3" text="Electric Scooter" />
+         </children>
+      </VBox>
+      <HBox layoutX="214.0" layoutY="74.0" prefHeight="81.0" prefWidth="148.0" AnchorPane.rightAnchor="194.0">
+         <children>
+            <VBox fx:id="selectMountainBike" prefHeight="96.0" prefWidth="100.0" visible="false">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Suspension type:" />
+                  <RadioButton mnemonicParsing="false" text="SuspensionA" />
+                  <RadioButton mnemonicParsing="false" text="SuspensionB" />
+                  <RadioButton mnemonicParsing="false" text="SuspensionC" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox layoutX="214.0" layoutY="160.0" prefHeight="81.0" prefWidth="148.0" AnchorPane.rightAnchor="194.0">
+         <children>
+            <VBox fx:id="selectElectricBike" prefHeight="96.0" prefWidth="100.0" visible="false">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pedal assist:" />
+                  <RadioButton mnemonicParsing="false" text="Pedal Assist 1" />
+                  <RadioButton mnemonicParsing="false" text="Pedal Assist 2" />
+                  <RadioButton mnemonicParsing="false" text="Pedal Assist 3" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox layoutX="203.0" layoutY="241.0" prefHeight="81.0" prefWidth="148.0" AnchorPane.rightAnchor="194.0">
+         <children>
+            <VBox fx:id="selectElectricScooter" prefHeight="96.0" prefWidth="100.0" visible="false">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ride Model:" />
+                  <RadioButton mnemonicParsing="false" text="Model a" />
+                  <RadioButton mnemonicParsing="false" text="Model b" />
+                  <RadioButton mnemonicParsing="false" text="Model c" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox layoutX="499.0" layoutY="65.0" prefHeight="100.0" prefWidth="100.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <VBox fx:id="selectBrakeType" prefHeight="200.0" prefWidth="100.0" visible="false">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Brake type:" />
+                  <RadioButton mnemonicParsing="false" text="Brake1" />
+                  <RadioButton mnemonicParsing="false" text="Brake2" />
+                  <RadioButton mnemonicParsing="false" text="Brake3" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <HBox layoutX="498.0" layoutY="232.0" prefHeight="100.0" prefWidth="103.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <VBox fx:id="selectBattryType" prefHeight="200.0" prefWidth="100.0" visible="false">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Battery type:" />
+                  <RadioButton mnemonicParsing="false" text="Battery1" />
+                  <RadioButton mnemonicParsing="false" text="Battery2" />
+                  <RadioButton mnemonicParsing="false" text="Battery3" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Label fx:id="text2" layoutX="30.0" layoutY="314.0" />
+   </children>
+   
+</AnchorPane>
