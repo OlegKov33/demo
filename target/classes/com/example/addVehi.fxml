@@ -6,13 +6,14 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.addVehiController">
    <children>
       <Button layoutX="69.0" layoutY="344.0" mnemonicParsing="false" onAction="#cancel" text="Cancel" />
       <Text layoutX="226.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vehicle Add" wrappingWidth="148.0" AnchorPane.topAnchor="30.0">
@@ -46,9 +47,9 @@
             <VBox fx:id="selectMountainBike" prefHeight="96.0" prefWidth="100.0" visible="false">
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Suspension type:" />
-                  <RadioButton mnemonicParsing="false" text="SuspensionA" />
-                  <RadioButton mnemonicParsing="false" text="SuspensionB" />
-                  <RadioButton mnemonicParsing="false" text="SuspensionC" />
+                  <RadioButton fx:id="a1" mnemonicParsing="false" onAction="#select11" text="SuspensionA" />
+                  <RadioButton fx:id="a2" mnemonicParsing="false" onAction="#select12" text="SuspensionB" />
+                  <RadioButton fx:id="a3" mnemonicParsing="false" onAction="#select13" text="SuspensionC" />
                </children>
             </VBox>
          </children>
@@ -58,9 +59,9 @@
             <VBox fx:id="selectElectricBike" prefHeight="96.0" prefWidth="100.0" visible="false">
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pedal assist:" />
-                  <RadioButton mnemonicParsing="false" text="Pedal Assist 1" />
-                  <RadioButton mnemonicParsing="false" text="Pedal Assist 2" />
-                  <RadioButton mnemonicParsing="false" text="Pedal Assist 3" />
+                  <RadioButton fx:id="b1" mnemonicParsing="false" onAction="#select11b" text="Pedal Assist 1" />
+                  <RadioButton fx:id="b2" mnemonicParsing="false" onAction="#select12b" text="Pedal Assist 2" />
+                  <RadioButton fx:id="b3" mnemonicParsing="false" onAction="#select13b" text="Pedal Assist 3" />
                </children>
             </VBox>
          </children>
@@ -70,9 +71,9 @@
             <VBox fx:id="selectElectricScooter" prefHeight="96.0" prefWidth="100.0" visible="false">
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Ride Model:" />
-                  <RadioButton mnemonicParsing="false" text="Model a" />
-                  <RadioButton mnemonicParsing="false" text="Model b" />
-                  <RadioButton mnemonicParsing="false" text="Model c" />
+                  <RadioButton fx:id="c1" mnemonicParsing="false" onAction="#select11c" text="Model a" />
+                  <RadioButton fx:id="c2" mnemonicParsing="false" onAction="#select12c" text="Model b" />
+                  <RadioButton fx:id="c3" mnemonicParsing="false" onAction="#select13c" text="Model c" />
                </children>
             </VBox>
          </children>
@@ -82,9 +83,9 @@
             <VBox fx:id="selectBrakeType" prefHeight="200.0" prefWidth="100.0" visible="false">
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Brake type:" />
-                  <RadioButton mnemonicParsing="false" text="Brake1" />
-                  <RadioButton mnemonicParsing="false" text="Brake2" />
-                  <RadioButton mnemonicParsing="false" text="Brake3" />
+                  <RadioButton fx:id="a11" mnemonicParsing="false" onAction="#select111" text="Brake: Disk" />
+                  <RadioButton fx:id="a12" mnemonicParsing="false" onAction="#select112" text="Brake: Rim" />
+                  <RadioButton fx:id="a13" mnemonicParsing="false" onAction="#select113" text="Brake: VBrake" />
                </children>
             </VBox>
          </children>
@@ -94,14 +95,15 @@
             <VBox fx:id="selectBattryType" prefHeight="200.0" prefWidth="100.0" visible="false">
                <children>
                   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Battery type:" />
-                  <RadioButton mnemonicParsing="false" text="Battery1" />
-                  <RadioButton mnemonicParsing="false" text="Battery2" />
-                  <RadioButton mnemonicParsing="false" text="Battery3" />
+                  <RadioButton fx:id="b11" mnemonicParsing="false" onAction="#select111b" text="Battery: Lithium Ion" />
+                  <RadioButton fx:id="b12" mnemonicParsing="false" onAction="#select112b" text="Battery: Lithium Mang" />
                </children>
             </VBox>
          </children>
       </HBox>
       <Label fx:id="text2" layoutX="30.0" layoutY="314.0" />
+      <TextField layoutX="134.0" layoutY="344.0" />
+      <Label layoutX="134.0" layoutY="323.0" text="Price (£)" />
    </children>
    
 </AnchorPane>
